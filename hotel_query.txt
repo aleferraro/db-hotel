@@ -17,8 +17,7 @@
 
     SELECT *
     FROM `ospiti`
-    WHERE (YEAR(CURRENT_TIMESTAMP) - YEAR(ospiti.date_of_birth)) > 20
-    ;
+    WHERE TIMESTAMPDIFF(YEAR, ospiti.date_of_birth, CURRENT_TIMESTAMP) >= 20
 
 ●	Seleziona tutti gli ospiti il cui nome inizia con la D
 
